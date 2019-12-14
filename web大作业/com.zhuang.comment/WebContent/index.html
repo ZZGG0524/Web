@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>comment</title>
+
+<link rel="stylesheet" href="css/jquery-ui.css">
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/refresh_blog.js"></script>
+<script src="js/submit_blog.js"></script>
+
+</head>
+<body onload="blog_init()">
+	<div>
+		<h1>发表主题</h1>
+		<!-- <form method="post">
+			<input type="text" id="blog_title" placeholder="标题" onfocus="submit_blog_init()" onsubmit="cleartextarea()"><br>
+			<textarea id="blog_content" placeholder="最长不超过1000个字符"></textarea>
+			<input id="submit" type="button" value="发表" onclick="submit_blog_request()">
+		</form> -->
+		<form>
+            <table class="text-right">
+                <tr>
+                    <td>标题</td>
+                    <td><input type="text" id="blog_title" name="blog_title" placeholder="标题" onfocus="submit_blog_init()"></td>
+                </tr>
+                <tr>
+                    <td>内容</td>
+                    <td><textarea id="blog_content" name="blog_content" placeholder="最长不超过1000个字符"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input id="submit" type="button" value="发表" onclick="submit_blog_request()"></td>
+                </tr>
+            </table>
+        </form>
+	</div>
+	<div><h1>博文内容</h1>
+		<div id="blog"></div>
+	</div>
+</body>
+</html>

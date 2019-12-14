@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章显示</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/refresh_blog_content.js"></script>
+    <script src="js/refresh_comment.js"></script>
+    <script src="js/submit_comment.js"></script>
+</head>
+<body onload="blog_content_init()" onpageshow="comment_init()">
+    <div id="content">
+        <div id="blog_title"></div>
+        <div id="blog_people_id"></div>
+        <div id="blog_time"></div>
+        <div id="blog_content"></div>
+    </div>
+    <div id="mydiv">
+		<h1>用户评论输入框</h1>
+		<form method="post">
+			<textarea id="comment_content" placeholder="最长不超过1000个字符" onfocus="user_comment_init()"></textarea>
+			<input id="submit" type="button" value="发表评论" onclick="user_comment_request()">
+		</form>
+	</div>
+    <div><h1>用户评论刷新</h1>
+		<div id="usercomment"></div>
+	</div>
+</body>
+</html>
